@@ -54,7 +54,7 @@ class PostBottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 25),
                 Text(
-                  "Mollit elit ea ipsum excepteur officia. Dolor nulla tempor minim cillum anim laboris irure occaecat. Culpa Lorem elit magna excepteur officia. Velit nulla et sunt duis eiusmod proident fugiat pariatur culpa commodo. Consectetur voluptate amet magna ea dolor nostrud. Pariatur ea do sunt non cupidatat laboris excepteur cillum veniam. Fugiat quis magna laboris qui esse enim enim qui anim dolor labore.",
+                  "Mollit elit ea ipsum excepteur officia. Dolor nulla tempor minim cillum anim laboris irure occaecat. Culpa Lorem elit magna excepteur officia. Velit nulla et sunt duis eiusmod proident fugiat pariatur culpa commodo. Consectetur voluptate amet magna ea dolor nostrud.",
                   style: TextStyle(color: Colors.black54, fontSize: 16),
                   textAlign: TextAlign.justify,
                 ),
@@ -75,8 +75,89 @@ class PostBottomBar extends StatelessWidget {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 5),
+                      child: Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            "images/city1.jpg",
+                            fit: BoxFit.cover,
+                            width: 120,
+                            height: 90,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 120,
+                        height: 90,
+                        margin: EdgeInsets.only(right: 5),
+                        decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(15),
+                          image: DecorationImage(
+                            image: AssetImage("images/city6.jpg"),
+                            fit: BoxFit.cover,
+                            opacity: 0.4,
+                          ),
+                        ),
+                        child: Text(
+                          "10+",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 23,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 ),
+                SizedBox(height: 15),
+                Container(
+                  height: 80,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(color: Colors.black26, blurRadius: 4)
+                          ],
+                        ),
+                        child: Icon(
+                          Icons.bookmark_outline,
+                          size: 40,
+                        ),
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.redAccent,
+                          boxShadow: [
+                            BoxShadow(color: Colors.black26, blurRadius: 4),
+                          ],
+                        ),
+                        child: Text(
+                          "Book Now",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 26,
+                            fontWeight: FontWeight.w500
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ),
