@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_ui/screens/post_screens.dart';
 import 'package:travel_app_ui/widgets/home_app_bar.dart';
+
+import '../widgets/home_bottom_bar.dart';
 
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
@@ -37,7 +40,13 @@ class HomePage extends StatelessWidget {
                             shrinkWrap: true,
                             itemBuilder: (BuildContext context, int index) {
                               return InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => PostScreen(),
+                                      ));
+                                },
                                 child: Container(
                                   width: 160,
                                   padding: EdgeInsets.all(20),
@@ -127,7 +136,13 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: [
                             InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PostScreen(),
+                                    ));
+                              },
                               child: Container(
                                 height: 200,
                                 decoration: BoxDecoration(
@@ -187,7 +202,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-    // bottomNavigationBar: ,
+      bottomNavigationBar: HomeBottomBar(),
     );
   }
 }
